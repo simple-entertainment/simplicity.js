@@ -1,7 +1,7 @@
 {
   "name": "simplicity.js",
   "version": "1.0.0",
-  "description": "simplicity in js form",
+  "description": "simplicity in JS form",
   "scripts": {
   	"clean": "rm -rf dist",
   	"prebuild": "mkdir -p dist",

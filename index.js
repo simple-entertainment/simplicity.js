@@ -15,17 +15,17 @@ global.sim = global.simplicity =
 
 		if (frameStartTime)
 		{
-			sim.deltaTime = now - frameStartTime;
+			simplicity.deltaTime = now - frameStartTime;
 		}
 
 		frameStartTime = now;
 
-		sim.engines.forEach(function(element, index)
+		simplicity.engines.forEach(function(element, index)
 		{
 			element.advance();
 		});
 
-		requestId = window.requestAnimationFrame(sim.play);
+		requestId = window.requestAnimationFrame(simplicity.play);
 	},
 	stop: function()
 	{
@@ -44,6 +44,7 @@ global.sim = global.simplicity =
 	ModelFactory: require('./lib/model/model-factory'),
 	Pipeline: require('./lib/rendering/pipeline'),
 	RenderingEngine: require('./lib/rendering/rendering-engine'),
+	RenderingFactory: require('./lib/rendering/rendering-factory'),
 	ScriptingEngine: require('./lib/scripting/scripting-engine'),
 	Vector3: require('./lib/math/vector3')
 };
